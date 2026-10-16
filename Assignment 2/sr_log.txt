@@ -1,0 +1,285 @@
+[     0.000 ms] SEND      DATA seq=0 (pkt#0) sender window=[0,3] nextseqnum=0
+[     0.000 ms] SEND      DATA seq=1 (pkt#1) sender window=[0,3] nextseqnum=1
+[     0.000 ms] SEND      DATA seq=2 (pkt#2) sender window=[0,3] nextseqnum=2
+[     0.000 ms] SEND      DATA seq=3 (pkt#3) sender window=[0,3] nextseqnum=3
+[     0.000 ms] DELAY     DATA seq=3 delayed by extra 178.4 ms
+[   254.000 ms] RECEIVE   receiver got DATA seq=0 (pkt#0) within window, buffered (receiver window=[0,3])
+[   254.000 ms] ACK       receiver sends individual ACK seq=0
+[   254.000 ms] CORRUPT   ACK seq=0 corrupted in channel
+[   254.000 ms] DELIVER   in-order delivery, rcv_base=1
+[   258.000 ms] RECEIVE   receiver got DATA seq=1 (pkt#1) within window, buffered (receiver window=[1,4])
+[   258.000 ms] ACK       receiver sends individual ACK seq=1
+[   258.000 ms] DELIVER   in-order delivery, rcv_base=2
+[   262.000 ms] RECEIVE   receiver got DATA seq=2 (pkt#2) within window, buffered (receiver window=[2,5])
+[   262.000 ms] ACK       receiver sends individual ACK seq=2
+[   262.000 ms] DELIVER   in-order delivery, rcv_base=3
+[   444.445 ms] RECEIVE   receiver got DATA seq=3 (pkt#3) within window, buffered (receiver window=[3,6])
+[   444.445 ms] ACK       receiver sends individual ACK seq=3
+[   444.445 ms] DELIVER   in-order delivery, rcv_base=4
+[   504.000 ms] RECEIVE   sender got corrupted ACK, discarded
+[   508.000 ms] RECEIVE   sender got ACK seq=1 window=[0,3]
+[   508.000 ms] WINDOW    pkt#1 acked, sender base=0 nextseqnum=4
+[   512.000 ms] RECEIVE   sender got ACK seq=2 window=[0,3]
+[   512.000 ms] WINDOW    pkt#2 acked, sender base=0 nextseqnum=4
+[   604.000 ms] TIMEOUT   timer expired for pkt#0 seq=0, resending only this packet
+[   604.000 ms] RESEND    DATA seq=0 (pkt#0) sender window=[0,3] nextseqnum=4
+[   616.000 ms] TIMEOUT   timer expired for pkt#3 seq=3, resending only this packet
+[   616.000 ms] RESEND    DATA seq=3 (pkt#3) sender window=[0,3] nextseqnum=4
+[   694.445 ms] RECEIVE   sender got ACK seq=3 window=[0,3]
+[   694.445 ms] WINDOW    pkt#3 acked, sender base=0 nextseqnum=4
+[   858.000 ms] RECEIVE   receiver got old DATA seq=0, re-sending ACK
+[   858.000 ms] ACK       receiver sends individual ACK seq=0
+[   870.000 ms] RECEIVE   receiver got old DATA seq=3, re-sending ACK
+[   870.000 ms] ACK       receiver sends individual ACK seq=3
+[   870.000 ms] LOSS      ACK seq=3 lost in channel
+[  1108.000 ms] RECEIVE   sender got ACK seq=0 window=[0,3]
+[  1108.000 ms] WINDOW    pkt#0 acked, sender base=4 nextseqnum=4
+[  1108.000 ms] SEND      DATA seq=4 (pkt#4) sender window=[4,7] nextseqnum=4
+[  1108.000 ms] SEND      DATA seq=5 (pkt#5) sender window=[4,7] nextseqnum=5
+[  1108.000 ms] SEND      DATA seq=6 (pkt#6) sender window=[4,7] nextseqnum=6
+[  1108.000 ms] SEND      DATA seq=7 (pkt#7) sender window=[4,7] nextseqnum=7
+[  1362.000 ms] RECEIVE   receiver got DATA seq=4 (pkt#4) within window, buffered (receiver window=[4,7])
+[  1362.000 ms] ACK       receiver sends individual ACK seq=4
+[  1362.000 ms] DELIVER   in-order delivery, rcv_base=5
+[  1366.000 ms] RECEIVE   receiver got DATA seq=5 (pkt#5) within window, buffered (receiver window=[5,8])
+[  1366.000 ms] ACK       receiver sends individual ACK seq=5
+[  1366.000 ms] DELIVER   in-order delivery, rcv_base=6
+[  1370.000 ms] RECEIVE   receiver got DATA seq=6 (pkt#6) within window, buffered (receiver window=[6,9])
+[  1370.000 ms] ACK       receiver sends individual ACK seq=6
+[  1370.000 ms] CORRUPT   ACK seq=6 corrupted in channel
+[  1370.000 ms] DELIVER   in-order delivery, rcv_base=7
+[  1374.000 ms] RECEIVE   receiver got DATA seq=7 (pkt#7) within window, buffered (receiver window=[7,10])
+[  1374.000 ms] ACK       receiver sends individual ACK seq=7
+[  1374.000 ms] DELIVER   in-order delivery, rcv_base=8
+[  1612.000 ms] RECEIVE   sender got ACK seq=4 window=[4,7]
+[  1612.000 ms] WINDOW    pkt#4 acked, sender base=5 nextseqnum=8
+[  1612.000 ms] SEND      DATA seq=0 (pkt#8) sender window=[5,8] nextseqnum=8
+[  1612.000 ms] LOSS      DATA seq=0 lost in channel
+[  1616.000 ms] RECEIVE   sender got ACK seq=5 window=[5,8]
+[  1616.000 ms] WINDOW    pkt#5 acked, sender base=6 nextseqnum=9
+[  1616.000 ms] SEND      DATA seq=1 (pkt#9) sender window=[6,9] nextseqnum=9
+[  1620.000 ms] RECEIVE   sender got corrupted ACK, discarded
+[  1624.000 ms] RECEIVE   sender got ACK seq=7 window=[6,9]
+[  1624.000 ms] WINDOW    pkt#7 acked, sender base=6 nextseqnum=10
+[  1720.000 ms] TIMEOUT   timer expired for pkt#6 seq=6, resending only this packet
+[  1720.000 ms] RESEND    DATA seq=6 (pkt#6) sender window=[6,9] nextseqnum=10
+[  1720.000 ms] DELAY     DATA seq=6 delayed by extra 176.5 ms
+[  1870.000 ms] RECEIVE   receiver got DATA seq=1 (pkt#9) within window, buffered (receiver window=[8,11])
+[  1870.000 ms] ACK       receiver sends individual ACK seq=1
+[  2120.000 ms] RECEIVE   sender got ACK seq=1 window=[6,9]
+[  2120.000 ms] WINDOW    pkt#9 acked, sender base=6 nextseqnum=10
+[  2150.524 ms] RECEIVE   receiver got old DATA seq=6, re-sending ACK
+[  2150.524 ms] ACK       receiver sends individual ACK seq=6
+[  2216.000 ms] TIMEOUT   timer expired for pkt#8 seq=0, resending only this packet
+[  2216.000 ms] RESEND    DATA seq=0 (pkt#8) sender window=[6,9] nextseqnum=10
+[  2324.000 ms] TIMEOUT   timer expired for pkt#6 seq=6, resending only this packet
+[  2324.000 ms] RESEND    DATA seq=6 (pkt#6) sender window=[6,9] nextseqnum=10
+[  2400.524 ms] RECEIVE   sender got ACK seq=6 window=[6,9]
+[  2400.524 ms] WINDOW    pkt#6 acked, sender base=8 nextseqnum=10
+[  2400.524 ms] SEND      DATA seq=2 (pkt#10) sender window=[8,11] nextseqnum=10
+[  2400.524 ms] CORRUPT   DATA seq=2 corrupted in channel
+[  2400.524 ms] SEND      DATA seq=3 (pkt#11) sender window=[8,11] nextseqnum=11
+[  2400.524 ms] LOSS      DATA seq=3 lost in channel
+[  2470.000 ms] RECEIVE   receiver got DATA seq=0 (pkt#8) within window, buffered (receiver window=[8,11])
+[  2470.000 ms] ACK       receiver sends individual ACK seq=0
+[  2470.000 ms] DELIVER   in-order delivery, rcv_base=9
+[  2470.000 ms] DELIVER   in-order delivery, rcv_base=10
+[  2578.000 ms] RECEIVE   receiver got old DATA seq=6, re-sending ACK
+[  2578.000 ms] ACK       receiver sends individual ACK seq=6
+[  2578.000 ms] LOSS      ACK seq=6 lost in channel
+[  2654.524 ms] RECEIVE   receiver got corrupted packet, discarded (rcv_base=10)
+[  2720.000 ms] RECEIVE   sender got ACK seq=0 window=[8,11]
+[  2720.000 ms] WINDOW    pkt#8 acked, sender base=10 nextseqnum=12
+[  2720.000 ms] SEND      DATA seq=4 (pkt#12) sender window=[10,13] nextseqnum=12
+[  2720.000 ms] SEND      DATA seq=5 (pkt#13) sender window=[10,13] nextseqnum=13
+[  2720.000 ms] DELAY     DATA seq=5 delayed by extra 99.8 ms
+[  2974.000 ms] RECEIVE   receiver got DATA seq=4 (pkt#12) within window, buffered (receiver window=[10,13])
+[  2974.000 ms] ACK       receiver sends individual ACK seq=4
+[  2974.000 ms] LOSS      ACK seq=4 lost in channel
+[  3004.524 ms] TIMEOUT   timer expired for pkt#10 seq=2, resending only this packet
+[  3004.524 ms] RESEND    DATA seq=2 (pkt#10) sender window=[10,13] nextseqnum=14
+[  3004.524 ms] DELAY     DATA seq=2 delayed by extra 78.3 ms
+[  3008.524 ms] TIMEOUT   timer expired for pkt#11 seq=3, resending only this packet
+[  3008.524 ms] RESEND    DATA seq=3 (pkt#11) sender window=[10,13] nextseqnum=14
+[  3077.812 ms] RECEIVE   receiver got DATA seq=5 (pkt#13) within window, buffered (receiver window=[10,13])
+[  3077.812 ms] ACK       receiver sends individual ACK seq=5
+[  3262.524 ms] RECEIVE   receiver got DATA seq=3 (pkt#11) within window, buffered (receiver window=[10,13])
+[  3262.524 ms] ACK       receiver sends individual ACK seq=3
+[  3324.000 ms] TIMEOUT   timer expired for pkt#12 seq=4, resending only this packet
+[  3324.000 ms] RESEND    DATA seq=4 (pkt#12) sender window=[10,13] nextseqnum=14
+[  3324.000 ms] CORRUPT   DATA seq=4 corrupted in channel
+[  3327.812 ms] RECEIVE   sender got ACK seq=5 window=[10,13]
+[  3327.812 ms] WINDOW    pkt#13 acked, sender base=10 nextseqnum=14
+[  3336.816 ms] RECEIVE   receiver got DATA seq=2 (pkt#10) within window, buffered (receiver window=[10,13])
+[  3336.816 ms] ACK       receiver sends individual ACK seq=2
+[  3336.816 ms] DELIVER   in-order delivery, rcv_base=11
+[  3336.816 ms] DELIVER   in-order delivery, rcv_base=12
+[  3336.816 ms] DELIVER   in-order delivery, rcv_base=13
+[  3336.816 ms] DELIVER   in-order delivery, rcv_base=14
+[  3512.524 ms] RECEIVE   sender got ACK seq=3 window=[10,13]
+[  3512.524 ms] WINDOW    pkt#11 acked, sender base=10 nextseqnum=14
+[  3578.000 ms] RECEIVE   receiver got corrupted packet, discarded (rcv_base=14)
+[  3586.816 ms] RECEIVE   sender got ACK seq=2 window=[10,13]
+[  3586.816 ms] WINDOW    pkt#10 acked, sender base=12 nextseqnum=14
+[  3586.816 ms] SEND      DATA seq=6 (pkt#14) sender window=[12,15] nextseqnum=14
+[  3586.816 ms] LOSS      DATA seq=6 lost in channel
+[  3586.816 ms] SEND      DATA seq=7 (pkt#15) sender window=[12,15] nextseqnum=15
+[  3844.816 ms] RECEIVE   receiver got DATA seq=7 (pkt#15) within window, buffered (receiver window=[14,17])
+[  3844.816 ms] ACK       receiver sends individual ACK seq=7
+[  3928.000 ms] TIMEOUT   timer expired for pkt#12 seq=4, resending only this packet
+[  3928.000 ms] RESEND    DATA seq=4 (pkt#12) sender window=[12,15] nextseqnum=16
+[  4094.816 ms] RECEIVE   sender got ACK seq=7 window=[12,15]
+[  4094.816 ms] WINDOW    pkt#15 acked, sender base=12 nextseqnum=16
+[  4182.000 ms] RECEIVE   receiver got old DATA seq=4, re-sending ACK
+[  4182.000 ms] ACK       receiver sends individual ACK seq=4
+[  4190.816 ms] TIMEOUT   timer expired for pkt#14 seq=6, resending only this packet
+[  4190.816 ms] RESEND    DATA seq=6 (pkt#14) sender window=[12,15] nextseqnum=16
+[  4432.000 ms] RECEIVE   sender got ACK seq=4 window=[12,15]
+[  4432.000 ms] WINDOW    pkt#12 acked, sender base=14 nextseqnum=16
+[  4432.000 ms] SEND      DATA seq=0 (pkt#16) sender window=[14,17] nextseqnum=16
+[  4432.000 ms] DELAY     DATA seq=0 delayed by extra 75.4 ms
+[  4432.000 ms] SEND      DATA seq=1 (pkt#17) sender window=[14,17] nextseqnum=17
+[  4444.816 ms] RECEIVE   receiver got DATA seq=6 (pkt#14) within window, buffered (receiver window=[14,17])
+[  4444.816 ms] ACK       receiver sends individual ACK seq=6
+[  4444.816 ms] DELIVER   in-order delivery, rcv_base=15
+[  4444.816 ms] DELIVER   in-order delivery, rcv_base=16
+[  4690.000 ms] RECEIVE   receiver got DATA seq=1 (pkt#17) within window, buffered (receiver window=[16,19])
+[  4690.000 ms] ACK       receiver sends individual ACK seq=1
+[  4690.000 ms] DELAY     ACK seq=1 delayed by extra 2.5 ms
+[  4694.816 ms] RECEIVE   sender got ACK seq=6 window=[14,17]
+[  4694.816 ms] WINDOW    pkt#14 acked, sender base=16 nextseqnum=18
+[  4694.816 ms] SEND      DATA seq=2 (pkt#18) sender window=[16,19] nextseqnum=18
+[  4694.816 ms] SEND      DATA seq=3 (pkt#19) sender window=[16,19] nextseqnum=19
+[  4761.389 ms] RECEIVE   receiver got DATA seq=0 (pkt#16) within window, buffered (receiver window=[16,19])
+[  4761.389 ms] ACK       receiver sends individual ACK seq=0
+[  4761.389 ms] DELIVER   in-order delivery, rcv_base=17
+[  4761.389 ms] DELIVER   in-order delivery, rcv_base=18
+[  4942.464 ms] RECEIVE   sender got ACK seq=1 window=[16,19]
+[  4942.464 ms] WINDOW    pkt#17 acked, sender base=16 nextseqnum=20
+[  4948.816 ms] RECEIVE   receiver got DATA seq=2 (pkt#18) within window, buffered (receiver window=[18,21])
+[  4948.816 ms] ACK       receiver sends individual ACK seq=2
+[  4948.816 ms] DELIVER   in-order delivery, rcv_base=19
+[  4952.816 ms] RECEIVE   receiver got DATA seq=3 (pkt#19) within window, buffered (receiver window=[19,22])
+[  4952.816 ms] ACK       receiver sends individual ACK seq=3
+[  4952.816 ms] DELIVER   in-order delivery, rcv_base=20
+[  5011.389 ms] RECEIVE   sender got ACK seq=0 window=[16,19]
+[  5011.389 ms] WINDOW    pkt#16 acked, sender base=18 nextseqnum=20
+[  5011.389 ms] SEND      DATA seq=4 (pkt#20) sender window=[18,21] nextseqnum=20
+[  5011.389 ms] DELAY     DATA seq=4 delayed by extra 153.5 ms
+[  5011.389 ms] SEND      DATA seq=5 (pkt#21) sender window=[18,21] nextseqnum=21
+[  5011.389 ms] CORRUPT   DATA seq=5 corrupted in channel
+[  5198.816 ms] RECEIVE   sender got ACK seq=2 window=[18,21]
+[  5198.816 ms] WINDOW    pkt#18 acked, sender base=19 nextseqnum=22
+[  5198.816 ms] SEND      DATA seq=6 (pkt#22) sender window=[19,22] nextseqnum=22
+[  5198.816 ms] DELAY     DATA seq=6 delayed by extra 3.1 ms
+[  5202.816 ms] RECEIVE   sender got ACK seq=3 window=[19,22]
+[  5202.816 ms] WINDOW    pkt#19 acked, sender base=20 nextseqnum=23
+[  5202.816 ms] SEND      DATA seq=7 (pkt#23) sender window=[20,23] nextseqnum=23
+[  5202.816 ms] LOSS      DATA seq=7 lost in channel
+[  5269.389 ms] RECEIVE   receiver got corrupted packet, discarded (rcv_base=20)
+[  5418.890 ms] RECEIVE   receiver got DATA seq=4 (pkt#20) within window, buffered (receiver window=[20,23])
+[  5418.890 ms] ACK       receiver sends individual ACK seq=4
+[  5418.890 ms] DELIVER   in-order delivery, rcv_base=21
+[  5455.876 ms] RECEIVE   receiver got DATA seq=6 (pkt#22) within window, buffered (receiver window=[21,24])
+[  5455.876 ms] ACK       receiver sends individual ACK seq=6
+[  5615.389 ms] TIMEOUT   timer expired for pkt#20 seq=4, resending only this packet
+[  5615.389 ms] RESEND    DATA seq=4 (pkt#20) sender window=[20,23] nextseqnum=24
+[  5615.389 ms] DELAY     DATA seq=4 delayed by extra 26.5 ms
+[  5619.389 ms] TIMEOUT   timer expired for pkt#21 seq=5, resending only this packet
+[  5619.389 ms] RESEND    DATA seq=5 (pkt#21) sender window=[20,23] nextseqnum=24
+[  5668.890 ms] RECEIVE   sender got ACK seq=4 window=[20,23]
+[  5668.890 ms] WINDOW    pkt#20 acked, sender base=21 nextseqnum=24
+[  5668.890 ms] SEND      DATA seq=0 (pkt#24) sender window=[21,24] nextseqnum=24
+[  5705.876 ms] RECEIVE   sender got ACK seq=6 window=[21,24]
+[  5705.876 ms] WINDOW    pkt#22 acked, sender base=21 nextseqnum=25
+[  5806.816 ms] TIMEOUT   timer expired for pkt#23 seq=7, resending only this packet
+[  5806.816 ms] RESEND    DATA seq=7 (pkt#23) sender window=[21,24] nextseqnum=25
+[  5873.389 ms] RECEIVE   receiver got DATA seq=5 (pkt#21) within window, buffered (receiver window=[21,24])
+[  5873.389 ms] ACK       receiver sends individual ACK seq=5
+[  5873.389 ms] DELIVER   in-order delivery, rcv_base=22
+[  5873.389 ms] DELIVER   in-order delivery, rcv_base=23
+[  5895.908 ms] RECEIVE   receiver got old DATA seq=4, re-sending ACK
+[  5895.908 ms] ACK       receiver sends individual ACK seq=4
+[  5922.890 ms] RECEIVE   receiver got DATA seq=0 (pkt#24) within window, buffered (receiver window=[23,26])
+[  5922.890 ms] ACK       receiver sends individual ACK seq=0
+[  5922.890 ms] CORRUPT   ACK seq=0 corrupted in channel
+[  6060.816 ms] RECEIVE   receiver got DATA seq=7 (pkt#23) within window, buffered (receiver window=[23,26])
+[  6060.816 ms] ACK       receiver sends individual ACK seq=7
+[  6060.816 ms] DELAY     ACK seq=7 delayed by extra 90.3 ms
+[  6060.816 ms] DELIVER   in-order delivery, rcv_base=24
+[  6060.816 ms] DELIVER   in-order delivery, rcv_base=25
+[  6123.389 ms] RECEIVE   sender got ACK seq=5 window=[21,24]
+[  6123.389 ms] WINDOW    pkt#21 acked, sender base=23 nextseqnum=25
+[  6123.389 ms] SEND      DATA seq=1 (pkt#25) sender window=[23,26] nextseqnum=25
+[  6123.389 ms] SEND      DATA seq=2 (pkt#26) sender window=[23,26] nextseqnum=26
+[  6145.908 ms] RECEIVE   sender got ACK seq=4 window=[23,26]
+[  6145.908 ms] RECEIVE   old ACK ignored
+[  6172.890 ms] RECEIVE   sender got corrupted ACK, discarded
+[  6272.890 ms] TIMEOUT   timer expired for pkt#24 seq=0, resending only this packet
+[  6272.890 ms] RESEND    DATA seq=0 (pkt#24) sender window=[23,26] nextseqnum=27
+[  6377.389 ms] RECEIVE   receiver got DATA seq=1 (pkt#25) within window, buffered (receiver window=[25,28])
+[  6377.389 ms] ACK       receiver sends individual ACK seq=1
+[  6377.389 ms] LOSS      ACK seq=1 lost in channel
+[  6377.389 ms] DELIVER   in-order delivery, rcv_base=26
+[  6381.389 ms] RECEIVE   receiver got DATA seq=2 (pkt#26) within window, buffered (receiver window=[26,29])
+[  6381.389 ms] ACK       receiver sends individual ACK seq=2
+[  6381.389 ms] DELIVER   in-order delivery, rcv_base=27
+[  6401.111 ms] RECEIVE   sender got ACK seq=7 window=[23,26]
+[  6401.111 ms] WINDOW    pkt#23 acked, sender base=24 nextseqnum=27
+[  6401.111 ms] SEND      DATA seq=3 (pkt#27) sender window=[24,27] nextseqnum=27
+[  6401.111 ms] LOSS      DATA seq=3 lost in channel
+[  6526.890 ms] RECEIVE   receiver got old DATA seq=0, re-sending ACK
+[  6526.890 ms] ACK       receiver sends individual ACK seq=0
+[  6631.389 ms] RECEIVE   sender got ACK seq=2 window=[24,27]
+[  6631.389 ms] WINDOW    pkt#26 acked, sender base=24 nextseqnum=28
+[  6727.389 ms] TIMEOUT   timer expired for pkt#25 seq=1, resending only this packet
+[  6727.389 ms] RESEND    DATA seq=1 (pkt#25) sender window=[24,27] nextseqnum=28
+[  6776.890 ms] RECEIVE   sender got ACK seq=0 window=[24,27]
+[  6776.890 ms] WINDOW    pkt#24 acked, sender base=25 nextseqnum=28
+[  6776.890 ms] SEND      DATA seq=4 (pkt#28) sender window=[25,28] nextseqnum=28
+[  6776.890 ms] DELAY     DATA seq=4 delayed by extra 35.3 ms
+[  6981.389 ms] RECEIVE   receiver got old DATA seq=1, re-sending ACK
+[  6981.389 ms] ACK       receiver sends individual ACK seq=1
+[  6981.389 ms] DELAY     ACK seq=1 delayed by extra 92.0 ms
+[  7005.111 ms] TIMEOUT   timer expired for pkt#27 seq=3, resending only this packet
+[  7005.111 ms] RESEND    DATA seq=3 (pkt#27) sender window=[25,28] nextseqnum=29
+[  7066.213 ms] RECEIVE   receiver got DATA seq=4 (pkt#28) within window, buffered (receiver window=[27,30])
+[  7066.213 ms] ACK       receiver sends individual ACK seq=4
+[  7066.213 ms] DELAY     ACK seq=4 delayed by extra 126.3 ms
+[  7259.111 ms] RECEIVE   receiver got DATA seq=3 (pkt#27) within window, buffered (receiver window=[27,30])
+[  7259.111 ms] ACK       receiver sends individual ACK seq=3
+[  7259.111 ms] DELIVER   in-order delivery, rcv_base=28
+[  7259.111 ms] DELIVER   in-order delivery, rcv_base=29
+[  7323.351 ms] RECEIVE   sender got ACK seq=1 window=[25,28]
+[  7323.351 ms] WINDOW    pkt#25 acked, sender base=27 nextseqnum=29
+[  7323.351 ms] SEND      DATA seq=5 (pkt#29) sender window=[27,30] nextseqnum=29
+[  7380.890 ms] TIMEOUT   timer expired for pkt#28 seq=4, resending only this packet
+[  7380.890 ms] RESEND    DATA seq=4 (pkt#28) sender window=[27,30] nextseqnum=30
+[  7380.890 ms] LOSS      DATA seq=4 lost in channel
+[  7442.490 ms] RECEIVE   sender got ACK seq=4 window=[27,30]
+[  7442.490 ms] WINDOW    pkt#28 acked, sender base=27 nextseqnum=30
+[  7509.111 ms] RECEIVE   sender got ACK seq=3 window=[27,30]
+[  7509.111 ms] WINDOW    pkt#27 acked, sender base=29 nextseqnum=30
+[  7577.351 ms] RECEIVE   receiver got DATA seq=5 (pkt#29) within window, buffered (receiver window=[29,32])
+[  7577.351 ms] ACK       receiver sends individual ACK seq=5
+[  7577.351 ms] DELIVER   in-order delivery, rcv_base=30
+[  7827.351 ms] RECEIVE   sender got ACK seq=5 window=[29,32]
+[  7827.351 ms] WINDOW    pkt#29 acked, sender base=30 nextseqnum=30
+
+===== SUMMARY =====
+protocol            : SR
+packets             : 30
+window N            : 4
+seq bits k          : 3 (modulo 8)
+seed                : 1044
+transmission time   : 4.000 ms per packet
+completion time     : 7827.351 ms
+packets sent        : 47
+retransmissions     : 17
+timeouts            : 17
+lost in channel     : 10
+corrupted in channel: 6
+delayed in channel  : 13
+delivered           : 30/30
+all correct/in order: True
+goodput             : 0.0307 Mbps
