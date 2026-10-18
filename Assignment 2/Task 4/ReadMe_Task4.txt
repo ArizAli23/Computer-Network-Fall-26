@@ -1,0 +1,2 @@
+GBN: python gbn_withLog.py --packets 30 --window 7 --k 3 --loss 0.1 --corrupt 0.1 --delay 0.1 --timeout 600 --seed 1044 > gbn_log.txt
+SR: python sr_withLog.py --packets 30 --window 4 --k 3 --loss 0.1 --corrupt 0.1 --delay 0.1 --timeout 600 --seed 1044 > sr_log.txt
